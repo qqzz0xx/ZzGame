@@ -21,11 +21,17 @@ struct GlobalAllocator
 DataChunk* FrameAllocator();
 DataChunk* GlobalAllocator();
 
-template<class _Ty, class _TAlloc=HeapAllocator>
+template<class _Ty, class _TAlloc = HeapAllocator>
 class STLAllocator
 {
 public:
-	STL_TEMPLATE_MEMBER(_Ty)
+	typedef _Ty value_type;
+	typedef value_type *pointer;
+	typedef value_type &reference;
+	typedef const value_type *const_pointer;
+	typedef const value_type &const_reference;
+	typedef size_t size_type;
+	typedef int difference_type;
 
 	template<class _Other>
 	struct rebind

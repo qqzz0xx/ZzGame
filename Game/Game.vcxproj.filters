@@ -27,6 +27,9 @@
     <ClInclude Include="STLAllocator.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="FixedVector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataChunk.cpp">
@@ -39,6 +42,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="STLAllocator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FixedVector.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

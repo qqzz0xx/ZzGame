@@ -112,11 +112,13 @@
   <ItemGroup>
     <ClInclude Include="Construct.h" />
     <ClInclude Include="DataChunk.h" />
+    <ClInclude Include="FixedVector.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="STLAllocator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataChunk.cpp" />
+    <ClCompile Include="FixedVector.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="STLAllocate.cpp" />
     <ClCompile Include="STLAllocator.cpp" />
