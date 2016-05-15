@@ -114,13 +114,13 @@
     <ClInclude Include="DataChunk.h" />
     <ClInclude Include="FixedVector.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Platform.h" />
     <ClInclude Include="STLAllocator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataChunk.cpp" />
     <ClCompile Include="FixedVector.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="STLAllocate.cpp" />
     <ClCompile Include="STLAllocator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

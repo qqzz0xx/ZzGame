@@ -42,14 +42,4 @@
 
 #define INLINE	inline
 
-#ifdef PLATFORM_WINDOWS
-#define EXPORT_API __declspec(dllexport)
-#define snprintf _snprintf
-#define SNPRINTF _vsnprintf
-#define STDCALL	__stdcall
-#else
-#define EXPORT_API
-#define snprintf snprintf
-#define SNPRINTF vsnprintf
-#define STDCALL
-#endif
+

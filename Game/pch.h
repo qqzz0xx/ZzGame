@@ -48,8 +48,8 @@
 #include <deque>
 #include <queue>
 #include <bitset>
-#include <hash_set>
-#include <hash_map>
+#include <unordered_set>
+#include <unordered_map>
 
 // STL algorithms & functions
 #include <algorithm>
@@ -91,6 +91,21 @@
 #include <new>
 #include <math.h>
 
+#endif
+
+#ifdef PLATFORM_WINDOWS
+#define EXPORT_API __declspec(dllexport)
+#undef snprintf
+#undef SNPRINTF
+#undef STDCALL
+#define snprintf _snprintf
+#define SNPRINTF _vsnprintf
+#define STDCALL	__stdcall
+#else
+#define EXPORT_API
+#define snprintf snprintf
+#define SNPRINTF vsnprintf
+#define STDCALL
 #endif
 
 #define STL_TEMPLATE_MEMBER(_Ty) \

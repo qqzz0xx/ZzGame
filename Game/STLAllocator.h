@@ -3,8 +3,6 @@
 #include "DataChunk.h"
 #include "Construct.h"
 
-#include <stdlib.h>
-
 struct HeapAllocator
 {
 	static DataChunk* Instance();

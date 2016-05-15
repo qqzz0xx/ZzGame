@@ -205,5 +205,26 @@ public:
 		}
 		mCount = size;
 	}
+
+	_Ty& operator [] (size_t i)
+	{
+		return mDataPointer[i];
+	}
+
+	const _Ty& operator [] (size_t i) const
+	{
+		return mDataPointer[i];
+	}
+
+	_Ty& at(size_t i)
+	{
+		return mDataPointer[i];
+	}
+
+	const _Ty& at(size_t i) const
+	{
+		return mDataPointer[i];
+	}
+
 };
 
