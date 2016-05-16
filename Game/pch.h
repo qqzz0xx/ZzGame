@@ -108,21 +108,31 @@
 #define STDCALL
 #endif
 
-#define STL_TEMPLATE_MEMBER(_Ty) \
-	typedef _Ty value_type;\
-	typedef value_type *pointer;\
-	typedef value_type &reference;\
-	typedef const value_type *const_pointer;\
-	typedef const value_type &const_reference;\
-	typedef size_t size_type;\
-	typedef int difference_type;
+// type
+typedef unsigned char		uint8;
+typedef unsigned short		uint16;
+typedef unsigned int		uint32;
+#ifdef PLATFORM_WINDOWS
+typedef unsigned __int64	uint64;
+#else
+typedef unsigned long long	uint64;
+#endif
+typedef signed char			int8;
+typedef signed short		int16;
+typedef signed int			int32;
+#ifdef PLATFORM_WINDOWS
+typedef signed __int64		int64;
+#else
+typedef long long			int64;
+#endif
+typedef unsigned char		uchar;
+typedef unsigned short		ushort;
+typedef unsigned int		uint;
+typedef unsigned long		ulong;
 
-#define DECLARE_STL_TEMPLATE_MEMBER STL_TEMPLATE_MEMBER(_Ty)
-
-template<class _Ty>
-bool TYPE_TRAITS_IS_BUILT_IN_TYPE(_Ty ty)
-{
-	return false;
-}
+// 浮点定点转换
+#define POINT_UNIT			10000
+#define FLOAT2FIXED(x)		((int64)(x * (float)POINT_UNIT))
+#define FIXED2FLOAT(x)		((float)x / (float)POINT_UNIT)
 
 

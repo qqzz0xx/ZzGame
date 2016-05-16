@@ -110,18 +110,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BaseState.h" />
     <ClInclude Include="Construct.h" />
     <ClInclude Include="DataChunk.h" />
+    <ClInclude Include="EnumCode.h" />
     <ClInclude Include="FixedVector.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Platform.h" />
+    <ClInclude Include="Rand.h" />
+    <ClInclude Include="StandState.h" />
+    <ClInclude Include="StateMachine.h" />
     <ClInclude Include="STLAllocator.h" />
+    <ClInclude Include="Vector2I.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BaseState.cpp" />
     <ClCompile Include="DataChunk.cpp" />
     <ClCompile Include="FixedVector.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Rand.cpp" />
+    <ClCompile Include="StandState.cpp" />
+    <ClCompile Include="StateMachine.cpp" />
     <ClCompile Include="STLAllocator.cpp" />
+    <ClCompile Include="Vector2I.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

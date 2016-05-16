@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{03a2b396-507a-4bb7-a4c9-3c98b7881d04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{701a4be3-bad6-4a5d-8b13-ca4d86a2a57b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Construct.h">
@@ -27,10 +33,28 @@
     <ClInclude Include="STLAllocator.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="FixedVector.h">
+    <ClInclude Include="Platform.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Platform.h">
+    <ClInclude Include="BaseState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumCode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StandState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FixedVector.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Rand.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2I.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,7 +68,22 @@
     <ClCompile Include="STLAllocator.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="BaseState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="StateMachine.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="StandState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
     <ClCompile Include="FixedVector.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Rand.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2I.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

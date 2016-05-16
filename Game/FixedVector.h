@@ -119,7 +119,7 @@ public:
 	iterator erase(iterator it)
 	{
 		Destroy(it);
-		memcpy(it, it + 1, (char*)end() - (char*)(it + 1));
+		memcpy(it, it + 1, (uint8*)end() - (uint8*)(it + 1));
 		mCount--;
 		return it;
 	}
@@ -130,7 +130,7 @@ public:
 		{
 			Destroy(it);
 		}
-		memcpy(it_begin, it_end, (char*)end() - (char*)(it_end));
+		memcpy(it_begin, it_end, (uint8*)end() - (uint8*)(it_end));
 		mCount -= (it_end - it_begin);
 		return it_begin;
 	}

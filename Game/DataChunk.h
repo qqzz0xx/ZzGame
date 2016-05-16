@@ -11,7 +11,7 @@ private:
 	{
 		DataBlock* next;
 		size_t use;
-		unsigned char data[0];
+		uint8 data[0];
 	};
 
 	DataBlock* mCurBlock;
