@@ -32,5 +32,5 @@ int64 LerpI(int64 from, int64 to, int64 factor)
 int64 LerpF(int64 from, int64 to, float factor)
 {
 	int64 ifactor = FLOAT2FIXED(factor);
-	return Lerp(from, to, ifactor);
+	return LerpI(from, to, ifactor);
 }
