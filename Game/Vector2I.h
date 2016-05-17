@@ -1,6 +1,6 @@
 #pragma once
 #include "pch.h"
-
+#include "Math.h"
 struct Vector2F
 {
 	float x, y;
@@ -34,7 +34,62 @@ public:
 
 	Vector2I(const uint64 coord[2]) : x(coord[0]), y(coord[1]) {}
 
+	void FromFloat(const Vector2F& v)
+	{
+		x = FLOAT2FIXED(v.x);
+		y = FLOAT2FIXED(v.y);
+	}
 
+	void ToFloat(Vector2F& v)
+	{
+		v.x = FIXED2FLOAT(x);
+		v.y = FIXED2FLOAT(y);
+	}
+
+	int64 Length() const
+	{
+		return SqrtI(x*x + y*y);
+	}
+
+	int64 SquaredLength() const
+	{
+		return x*x + y*y;
+	}
+
+	int64 Dot(const Vector2I& v) const
+	{
+		return (x*v.x + y*v.x) / POINT_UNIT;
+	}
+
+	Vector2I Coss(const Vector2I& v) const
+	{
+		Vector2I tmp;
+		tmp.x = x*v.y - v.y*x;
+		tmp.y = y*v.x - v.x*y;
+		return tmp;
+	}
+
+	void Normalize()
+	{
+		int64 length = Length();
+		x = x / length * POINT_UNIT;
+		y = y / length * POINT_UNIT;
+	}
+
+	Vector2I GetNormalize()
+	{
+		Normalize();
+		return *this;
+	}
+
+	Vector2I Lerp(const Vector2I& v, int64 factor)
+	{
+		Vector2I temp;
+		temp.x = LerpI(x, v.x, factor);
+		temp.y = LerpI(y, v.y, factor);
+
+		return temp;
+	}
 
 	Vector2I& operator = (const Vector2I& v)
 	{
@@ -57,7 +112,7 @@ public:
 
 	uint64* Ptr() { return &x; }
 
-	const uint64* Ptr() const { return &x };
+	const uint64* Ptr() const { return &x; }
 
 	bool operator == (const Vector2I& v) const { return (x == v.x) && (y == v.y); }
 
@@ -102,7 +157,6 @@ public:
 	friend Vector2I operator * (const uint64 scalar, const Vector2I& v) { return Vector2I(v.x * scalar, v.y * scalar); }
 
 	friend Vector2I operator / (const uint64 scalar, const Vector2I& v) { return Vector2I(v.x / scalar, v.y / scalar); }
-
 
 };
 

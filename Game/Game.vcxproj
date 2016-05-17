@@ -75,6 +75,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -115,6 +118,8 @@
     <ClInclude Include="DataChunk.h" />
     <ClInclude Include="EnumCode.h" />
     <ClInclude Include="FixedVector.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="Math.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Platform.h" />
     <ClInclude Include="Rand.h" />
@@ -127,7 +132,9 @@
     <ClCompile Include="BaseState.cpp" />
     <ClCompile Include="DataChunk.cpp" />
     <ClCompile Include="FixedVector.cpp" />
+    <ClCompile Include="Log.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Math.cpp" />
     <ClCompile Include="Rand.cpp" />
     <ClCompile Include="StandState.cpp" />
     <ClCompile Include="StateMachine.cpp" />
