@@ -32,7 +32,7 @@ void LogV(int level, const char* szFormat, va_list agrs)
 	const char* pre = PREFIX[level];
 	strcpy(buf, pre);
 	size_t preLen = strlen(pre);
-	snprintf(&buf[preLen], 1023 - preLen, szFormat, agrs);
+	SNPRINTF(&buf[preLen], 1023 - preLen, szFormat, agrs);
 	buf[1023] = 0;
 	printf(buf);
 }
