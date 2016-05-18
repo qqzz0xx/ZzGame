@@ -21,16 +21,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Construct.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DataChunk.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="pch.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="STLAllocator.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Platform.h">
@@ -42,29 +33,14 @@
     <ClInclude Include="StateMachine.h">
       <Filter>States</Filter>
     </ClInclude>
-    <ClInclude Include="EnumCode.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="StandState.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="FixedVector.h">
       <Filter>Base</Filter>
     </ClInclude>
     <ClInclude Include="Rand.h">
       <Filter>Base</Filter>
     </ClInclude>
-    <ClInclude Include="Vector2I.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Math.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Log.h">
       <Filter>Base</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector3I.h">
-      <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Battle.h">
       <Filter>头文件</Filter>
@@ -72,27 +48,45 @@
     <ClInclude Include="Game.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Singleton.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="CoreLocator.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="GlobalVar.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Timer.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalVar.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Math.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumCode.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="StandState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2I.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3I.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="DataChunk.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Construct.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="STLAllocator.h">
+      <Filter>Base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DataChunk.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="STLAllocator.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="BaseState.cpp">
@@ -101,26 +95,11 @@
     <ClCompile Include="StateMachine.cpp">
       <Filter>States</Filter>
     </ClCompile>
-    <ClCompile Include="StandState.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="FixedVector.cpp">
       <Filter>Base</Filter>
     </ClCompile>
     <ClCompile Include="Rand.cpp">
       <Filter>Base</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector2I.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Math.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Log.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector3I.cpp">
-      <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Battle.cpp">
       <Filter>源文件</Filter>
@@ -128,17 +107,38 @@
     <ClCompile Include="Game.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Singleton.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="CoreLocator.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="GlobalVar.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Timer.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Singleton.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalVar.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Math.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="StandState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2I.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3I.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="STLAllocator.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="DataChunk.cpp">
+      <Filter>Base</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
