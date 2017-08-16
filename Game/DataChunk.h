@@ -1,5 +1,6 @@
 #pragma once
 #include "pch.h"
+
 class DataChunk
 {
 private:
@@ -36,4 +37,20 @@ public:
 	size_t GetAllocSize() const { return mAllocSize; }
 	size_t GetUseSize() const { return mUseSize; }
 };
+
+struct HeapAllocator
+{
+	static DataChunk* Instance();
+};
+struct FrameAllocator
+{
+	static DataChunk* Instance();
+};
+struct GlobalAllocator
+{
+	static DataChunk* Instance();
+};
+
+DataChunk* FrameAllocatorInst();
+DataChunk* GlobalAllocatorInst();
 

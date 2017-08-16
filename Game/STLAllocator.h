@@ -3,22 +3,6 @@
 #include "DataChunk.h"
 #include "Construct.h"
 
-struct HeapAllocator
-{
-	static DataChunk* Instance();
-};
-struct FrameAllocator
-{
-	static DataChunk* Instance();
-};
-struct GlobalAllocator
-{
-	static DataChunk* Instance();
-};
-
-DataChunk* FrameAllocator();
-DataChunk* GlobalAllocator();
-
 template<class _Ty, class _TAlloc = HeapAllocator>
 class STLAllocator
 {

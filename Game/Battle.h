@@ -3,9 +3,9 @@
 class Battle
 {
 private:
-	void StartUpdate();
+	void EnterFrame();
 	void FrameTick();
-	void ExitUpdate();
+	void ExitFrame();
 public:
 	Battle();
 	~Battle();

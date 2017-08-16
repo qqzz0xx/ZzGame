@@ -10,10 +10,10 @@ public:
 	void Run();
 private:
 	bool Init();
-	void Update();
-	void StartUpdate();
+
+	void EnterFrame();
 	void FrameTick();
-	void ExitUpdate();
+	void ExitFrame();
 	void Destroy();
 
 private:

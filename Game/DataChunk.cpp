@@ -47,7 +47,7 @@ void* DataChunk::Alloc(size_t n)
 		mCurBlock = block;
 	}
 
-	void* ret = (void*)mCurBlock->data[mCurBlock->use];
+	void* ret = (void*)&mCurBlock->data[mCurBlock->use];
 	mCurBlock->use += n;
 	mUseSize += n;
 	mMaxUseSize = __max(mMaxUseSize, mUseSize);
@@ -83,4 +83,32 @@ void DataChunk::RecycleBlocks()
 		mCurBlock = mCurBlock->next;
 	}
 	mUseSize = 0;
+}
+
+
+DataChunk g_FrameDataChunk;
+DataChunk g_GlobalDataChunk;
+DataChunk * HeapAllocator::Instance()
+{
+	return nullptr;
+}
+
+DataChunk * FrameAllocator::Instance()
+{
+	return &g_FrameDataChunk;
+}
+
+DataChunk * GlobalAllocator::Instance()
+{
+	return &g_GlobalDataChunk;
+}
+
+DataChunk * FrameAllocatorInst()
+{
+	return &g_FrameDataChunk;
+}
+
+DataChunk * GlobalAllocatorInst()
+{
+	return &g_GlobalDataChunk;
 }

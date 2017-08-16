@@ -4,7 +4,7 @@
 #include "GlobalVar.h"
 #include "Log.h"
 
-void Battle::StartUpdate()
+void Battle::EnterFrame()
 {
 	FrameAllocator::Instance()->RecycleBlocks();
 }
@@ -14,7 +14,7 @@ void Battle::FrameTick()
 	
 }
 
-void Battle::ExitUpdate()
+void Battle::ExitFrame()
 {
 	FrameAllocator::Instance()->RecycleBlocks();
 }
@@ -41,9 +41,9 @@ void Battle::Update()
 	mSumTime += mCurTime - mPrevTime;
 	if (mSumTime > GV.BattleUpdateMillisecond)
 	{
-		StartUpdate();
+		EnterFrame();
 		FrameTick();
-		ExitUpdate();
+		ExitFrame();
 		mSumTime -= GV.BattleUpdateMillisecond;
 	}
 	mPrevTime = mCurTime;

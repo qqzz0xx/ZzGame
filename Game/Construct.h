@@ -1,6 +1,15 @@
 #pragma once
 #include "pch.h"
 #include <new.h>
+#include "DataChunk.h"
+
+template<class _Ty, class _TAlloc = FrameAllocator>
+inline _Ty* New()
+{
+	void* ptr = _TAlloc::Instance()->Alloc(sizeof(_Ty));
+	return new ((void*)ptr) _Ty();
+}
+
 template<class _Ty>
 inline void Construct(_Ty *ptr)
 {

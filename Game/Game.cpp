@@ -12,7 +12,9 @@ void Game::Run()
 		mSumTime += mCurTime - mPrevTime;
 		if (mSumTime > GV.GameUpdateMillisecond)
 		{
-			Update();
+			EnterFrame();
+			FrameTick();
+			ExitFrame();
 			mSumTime -= GV.GameUpdateMillisecond;
 		}
 		else
@@ -37,25 +39,19 @@ bool Game::Init()
 	return true;
 }
 
-void Game::Update()
+void Game::EnterFrame()
 {
-	StartUpdate();
-	FrameTick();
-	ExitUpdate();
 }
 
-void Game::StartUpdate()
+void Game::ExitFrame()
 {
 }
 
 void Game::FrameTick()
 {
-	mLocator->mBattle->Update();
+	
 }
 
-void Game::ExitUpdate()
-{
-}
 
 void Game::Destroy()
 {
